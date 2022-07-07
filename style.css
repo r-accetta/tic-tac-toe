@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, main, .restart-container {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+main {
+    background-color: white;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 8px;
+    background-color: dimgray;
+    
+}
+
+.cell {
+    --cell-size: 128px;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell.x::before,
+.cell.x::after {
+    content: '';
+    width: 24px;
+    height: 96px;
+    background-color: red;
+    position: absolute;
+}
+
+.cell.x::before {
+    transform: rotate(-45deg);
+}
+
+.cell.x::after {
+    transform: rotate(45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.cell.circle::before {
+    width: 96px;
+    height: 96px;
+    background-color: blue;
+}
+
+.cell.circle::after {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+}
+
+.cell:not(.x):not(.circle):hover {
+    background-color: lightgray;
+}
+
+.restart-container {
+    padding-top: 36px;
+}
+
+#restart-button {
+    width: 192px;
+    height: 72px;
+    border: 6px solid dimgray;
+    background-color: white;
+    font-size: 2rem;
+}
+
+#restart-button:hover {
+    background-color: lightgray;
+}
