@@ -23,6 +23,7 @@ h1 {
 
 main {
     background-color: white;
+    position: relative;
 }
 
 .board {
@@ -100,4 +101,21 @@ main {
 
 #restart-button:hover {
     background-color: silver;
+}
+
+.end-banner {
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    position: absolute;
+    top: 36%;
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 0 0 16px black;
+}
+
+.end-banner.active {
+    display: block;
 }
