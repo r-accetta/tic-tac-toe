@@ -44,8 +44,8 @@ main {
     position: relative;
 }
 
-.cell.x::before,
-.cell.x::after {
+.cell.X::before,
+.cell.X::after {
     content: '';
     width: 24px;
     height: 96px;
@@ -53,35 +53,35 @@ main {
     position: absolute;
 }
 
-.cell.x::before {
+.cell.X::before {
     transform: rotate(-45deg);
 }
 
-.cell.x::after {
+.cell.X::after {
     transform: rotate(45deg);
 }
 
-.cell.circle::before,
-.cell.circle::after {
+.cell.O::before,
+.cell.O::after {
     content: '';
     position: absolute;
     border-radius: 50%;
 }
 
-.cell.circle::before {
+.cell.O::before {
     width: 96px;
     height: 96px;
     background-color: blue;
 }
 
-.cell.circle::after {
+.cell.O::after {
     width: 48px;
     height: 48px;
     background-color: white;
 }
 
-.cell:not(.x):not(.circle):hover {
-    background-color: lightgray;
+.cell:not(.X):not(.O):hover {
+    background-color: lightgreen;
 }
 
 .restart-container {
