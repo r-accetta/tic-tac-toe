@@ -32,6 +32,7 @@ const displayController = (() => {
     restartButton.addEventListener("click", (e) => {
         console.log('restart');
         gameboard.reset();
+        gameController.resetCurrentSymbol();
         resetDisplay()
     })
 
@@ -54,13 +55,18 @@ const displayController = (() => {
 
 const gameController = (() => {
     let _currentSymbol = 'X';
+
     const switchCurrentSymbol = () => {
         _currentSymbol = (_currentSymbol == 'X') ? 'O' : 'X'
-    }
+    };
+
+    const resetCurrentSymbol = () => {
+        _currentSymbol = 'X'
+    };
 
     const getCurrentSymbol = () => {
         return _currentSymbol
-    }
+    };
 
     const handleClick = (index) => {
         if (gameboard.getCell(index) === ''){
@@ -77,7 +83,7 @@ const gameController = (() => {
         _currentSymbol = 'X'
     };
 
-    return {handleClick, reset, switchCurrentSymbol}
+    return {handleClick, reset, switchCurrentSymbol, resetCurrentSymbol}
 })()
 
 

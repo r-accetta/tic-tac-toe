@@ -92,10 +92,12 @@ main {
     width: 192px;
     height: 72px;
     border: 6px solid dimgray;
-    background-color: white;
+    background-color: gainsboro;
     font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+    color: black;
 }
 
 #restart-button:hover {
-    background-color: lightgray;
+    background-color: silver;
 }
